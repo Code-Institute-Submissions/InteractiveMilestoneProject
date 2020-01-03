@@ -1,0 +1,85 @@
+ #cont {
+     text-align: center;
+     position: relative;
+     width: 90%;
+     transform: translateX(45%);
+     left: -35%;
+     height: 650px;
+
+ }
+ 
+ #table_memoria {
+     background: #ccc;
+     border: black 2px solid;
+     width: 80%;
+     height: 50%;
+     padding: 5px;
+     margin: 0px auto;
+     position: absolute;
+     transform: translateX(10%);    
+     top: 170px;
+ }
+
+ #table_memoria > div {
+     background: #169B62;
+     border: #000 1px solid;
+     width: 26%;
+     height: 20%;
+     float: left;
+     margin-top: 7px;
+     margin-bottom: 7px;
+     margin-left: 14px;
+     margin-right: 0px;
+     font-size: 35px;
+     cursor: pointer;
+     text-align: center;
+
+ }
+ 
+ /* ____________  PRIMERA MEDIA SCREEN ___________*/
+
+ @media (min-width: 768px) {
+
+     #table_memoria {
+         height: 55%;
+         top: 120px;
+     }
+
+     #table_memoria > div {
+         width: 21%;
+         height: 27%;
+         margin-left: 17px;
+     }
+
+ }
+
+ /* ___________  SEGUNDA MEDIA SCREEN _____________*/
+
+ @media (min-width: 992px) {
+     #cont {
+         transform: translateX(-50%);
+         left: 50%;
+         width: 70%;
+         height: 600px;
+         max-width: 785px;
+     }
+     #table_memoria {
+         height: 60%;
+         top: 120px;
+         max-width: 630px;
+         max-height: 400px;
+     }
+
+     #table_memoria > div {
+         background: #169B62;
+         border: #000 1px solid;
+         width: 20%;
+         height: 28%;
+         float: left;
+         margin: 8px;
+         margin-left: 16.5px;
+         font-size: 64px;
+         cursor: pointer;
+         text-align: center;
+     }
+ }
