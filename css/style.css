@@ -35,6 +35,36 @@
      text-align: center;
 
  }
+  #cronometro {
+     position: absolute;
+     display: inline-block;
+     top: 100px;
+     right: 2px;
+     width: 40px;
+     height: 40px;
+     font-size: 25px;
+     font-weight: bold;
+     background: #FFF;
+     border-radius: 50px;
+     padding-top: 5px;
+
+ }
+ 
+ .green {
+     color: green;
+     border: 5px solid green;
+ }
+
+ .yellow {
+     color: orange;
+     border: 5px solid orange;
+ }
+
+ .red {
+     color: red;
+     border: 5px solid red;
+ }
+
  
  /* ____________  PRIMERA MEDIA SCREEN ___________*/
 
@@ -49,6 +79,12 @@
          width: 21%;
          height: 27%;
          margin-left: 17px;
+     }
+      #cronometro {
+
+         top: 40px;
+
+
      }
 
  }
