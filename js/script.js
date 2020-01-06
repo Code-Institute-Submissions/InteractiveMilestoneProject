@@ -37,6 +37,14 @@ var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
             }, 1000);
 
         }
+        
+         $('#start').on("click", function() {
+            if (seg === 25) {
+                $("#cronometro").addClass("green");
+                $("#borde").hide();
+                restar();
+            }
+        });
 
         // Metodo Fisher-Yates para mezclar un array
         Array.prototype.memoriaCartaEmbarajar = function() {
@@ -93,14 +101,22 @@ var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
                             // XXXXXXXX      AQUI TENGO QUE PARAR EL RELOJ     XXXXXXXX
 
                           
-                                alert("GANASTE !!!  ... Creando un nuevo tablero");
-                               
+                              setTimeout(function() {
+                                alert("Congratulations You Won !!!. Play Again");
+                                clearInterval(timer);
                                 document.getElementById('table_memoria').innerHTML = "";
-                                
+                                seg = 25;
+                                $("#borde").show();
+                                $("#cronometro").html("25");
+                                $("#cronometro").removeClass("yellow");
+                                $("#cronometro").removeClass("red");
+                                $("#cronometro").addClass("green");
                                 valor_memoria = [];
                                 memoria_carta_ids = [];
                                 virada_carta = 0;
                                 nuevaTabla();
+
+                            }, 100);
 
                        
 
@@ -127,4 +143,4 @@ var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
         }
         
         nuevaTabla();
-        restar();
+        // restar();
