@@ -1,3 +1,8 @@
+ $(document).ready(function() {
+          
+            $("#cronometro").addClass("green");
+        });
+
 var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
 
         var valor_memoria = [];
@@ -20,7 +25,7 @@ var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
                     clearInterval(timer);
                     virada_carta = 0;
                     nuevaTabla();
-                   
+                    $("#borde").show();
                     $("#cronometro").html("25");
                     $("#cronometro").removeClass("red");
                     $("#cronometro").addClass("green");
@@ -68,8 +73,7 @@ var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
                 output += '<div id="carta_' + i + '" onclick="virarCartaMemoria(this,\'' + arrayMemoria[i] + '\')"></div>';
             }
             document.getElementById('table_memoria').innerHTML = output;
-            //            $("#borde").show();
-            //            document.getElementById('borde').show();
+           
 
             valor_memoria = [];
             memoria_carta_ids = [];

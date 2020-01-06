@@ -8,6 +8,18 @@
 
  }
  
+  #borde {
+     position: absolute;
+     width: 80%;
+     height: 50%;
+     padding: 5px;
+     transform: translateX(10%);    
+     top: 170px;
+     z-index: 5;
+ 
+
+ }
+ 
  #table_memoria {
      background: #ccc;
      border: black 2px solid;
@@ -78,7 +90,12 @@
  /* ____________  PRIMERA MEDIA SCREEN ___________*/
 
  @media (min-width: 768px) {
-
+        
+         #borde {
+         height: 55%;
+         top: 120px;
+     }
+    
      #table_memoria {
          height: 55%;
          top: 120px;
@@ -107,6 +124,14 @@
          width: 70%;
          height: 600px;
          max-width: 785px;
+     }
+     
+          #borde {
+         height: 60%;
+         top: 120px;
+         max-width: 630px;
+         max-height: 400px;
+
      }
      #table_memoria {
          height: 60%;
