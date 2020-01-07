@@ -5,9 +5,16 @@
      transform: translateX(45%);
      left: -35%;
      height: 650px;
-
  }
- 
+ h1{
+  margin-top: 0px;
+  font-size: 1.5em;
+  }
+  #cont p{
+
+    font-size: 15px;
+    margin-bottom: 20px;
+}
   #borde {
      position: absolute;
      width: 80%;
@@ -16,8 +23,6 @@
      transform: translateX(10%);    
      top: 170px;
      z-index: 5;
- 
-
  }
  
  #table_memoria {
@@ -86,19 +91,31 @@
      border-radius: 10px;
      background: rgb(22, 155, 98, 0.6);
  }
- 
+ /* ____________  ESTA MEDIA SCREEN ES PARA LOS MOBILES PEQUEÑOS ___________*/
+
+@media screen and (max-width: 360px) {
+          
+     h1 {
+     margin-top: 0px;
+     font-size: 1.2em;
+    }
+   #cont p{
+       font-size: 13px;
+       margin-bottom: 20px;
+   }
+}
  /* ____________  PRIMERA MEDIA SCREEN ___________*/
 
- @media (min-width: 768px) {
+ @media (min-width: 789px) {
         
          #borde {
          height: 55%;
-         top: 120px;
+         top: 140px;
      }
     
      #table_memoria {
          height: 55%;
-         top: 120px;
+         top: 140px;
      }
 
      #table_memoria > div {
@@ -108,7 +125,7 @@
      }
       #cronometro {
 
-         top: 40px;
+         top: 75px;
 
 
      }
@@ -128,14 +145,14 @@
      
           #borde {
          height: 60%;
-         top: 120px;
+         top: 150px;
          max-width: 630px;
          max-height: 400px;
 
      }
      #table_memoria {
          height: 60%;
-         top: 120px;
+         top: 150px;
          max-width: 630px;
          max-height: 400px;
      }

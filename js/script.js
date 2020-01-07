@@ -3,7 +3,7 @@
             $("#cronometro").addClass("green");
         });
 
-var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
+const arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
 
         var valor_memoria = [];
         var memoria_carta_ids = [];
@@ -43,6 +43,7 @@ var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
 
         }
         
+       
          $('#start').on("click", function() {
             if (seg === 25) {
                 $("#cronometro").addClass("green");
@@ -73,12 +74,11 @@ var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
                 output += '<div id="carta_' + i + '" onclick="virarCartaMemoria(this,\'' + arrayMemoria[i] + '\')"></div>';
             }
             document.getElementById('table_memoria').innerHTML = output;
-           
-
+            
             valor_memoria = [];
             memoria_carta_ids = [];
             var virada_carta = 0;
-            // probando una cosa
+         
         }
 
         // Funcion del Juego
@@ -104,8 +104,7 @@ var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
                         if (virada_carta === arrayMemoria.length) {
                             // XXXXXXXX      AQUI TENGO QUE PARAR EL RELOJ     XXXXXXXX
 
-                          
-                              setTimeout(function() {
+                            setTimeout(function() {
                                 alert("Congratulations You Won !!!. Play Again");
                                 clearInterval(timer);
                                 document.getElementById('table_memoria').innerHTML = "";
@@ -123,9 +122,6 @@ var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
                             }, 100);
 
                        
-
-
-
                         }
                     } else {
                         function virarAtras() {
@@ -147,4 +143,4 @@ var arrayMemoria = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
         }
         
         nuevaTabla();
-        // restar();
+      
